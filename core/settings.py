@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,6 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+    'blog',
+
+ #   'tailwind',
+ #   'theme'
+]
+
+#TAILWIND_APP_NAME='theme'
+
+#INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
 MIDDLEWARE = [
